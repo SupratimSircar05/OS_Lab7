@@ -2,7 +2,7 @@
 #include<unistd.h>      //for fork()
 #include<sys/wait.h>    //for wait(NULL)
 
-int main() {
+void main() {
     int pid1, pid2;
     pid1 = fork();
     if (pid1 == 0)
@@ -16,5 +16,4 @@ int main() {
             printf("\nParent id = %d\n", getpid());
         }
     }
-    return 0;
 }

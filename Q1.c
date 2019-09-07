@@ -1,7 +1,8 @@
 #include<stdio.h>
 #include<unistd.h>
 
-void main() {
+int main() {
     fork();     //creation of child process
     printf("Hello\n");
+    return 0;
 }

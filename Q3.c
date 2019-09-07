@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<unistd.h>
 
-int main() {
+void main() {
     int pid1, pid2;
     pid1 = fork();
     if (pid1 == 0)
@@ -14,5 +14,4 @@ int main() {
         else
             printf("\nParent id = %d\n", getpid());
     }
-    return 0;
 }
