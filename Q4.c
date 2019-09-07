@@ -70,4 +70,5 @@ int main() {
     producer();
     consumer();
     printf("\n");
+    return 0;
 }
