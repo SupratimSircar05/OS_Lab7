@@ -1,47 +1,46 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include<unistd.h>
 
-    int s=1;
-    int E=-1;    //buffer size
-    int F=0;
+int s = 1;
+int E = -1;    //buffer size
+int F = 0;
 
 void producer();
+
 void consumer();
 
-void displaySemaphores(){
+void displaySemaphores() {
     printf("\ns = %d\nE = %d\nF = %d\n", s, E, F);
 }
 
-void wait(int *i){
-    while (*i<=0);
+void wait(int *i) {
+    while (*i <= 0);
     --(*i);
 }
 
-void signal(int *i){
+void signal(int *i) {
     ++(*i);
 }
 
-void produce(){
+void produce() {
     printf("\nProduced by producer");
 }
 
-void append(){
+void append() {
     printf("\nAppended to buffer by producer");
 
 }
 
-void take(){
+void take() {
     printf("\nTaken from buffer by consumer");
 }
 
-void consume(){
+void consume() {
     printf("\nConsumed by consumer");
 
 }
 
-void producer(){
-    while(E!=0){
+void producer() {
+    while (E != 0) {
         produce();
         wait(&E);
         wait(&s);
@@ -53,8 +52,8 @@ void producer(){
     }
 }
 
-void consumer(){
-    while(F!=0){
+void consumer() {
+    while (F != 0) {
         wait(&F);
         wait(&s);
         take();
@@ -65,7 +64,7 @@ void consumer(){
     }
 }
 
-int main(){
+int main() {
     printf("\nEnter buffer size : ");
     scanf("%d", &E);
     producer();
