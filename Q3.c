@@ -1,3 +1,5 @@
+// create different process tree using fork() system call method.
+
 #include<stdio.h>
 #include<unistd.h>
 

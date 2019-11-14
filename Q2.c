@@ -1,3 +1,5 @@
+// create child processes and print the messages where parent process waits for its child processes by using wait() method.
+
 #include<stdio.h>
 #include<unistd.h>      //for fork()
 #include<sys/wait.h>    //for wait(NULL)

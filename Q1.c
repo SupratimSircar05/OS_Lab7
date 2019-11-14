@@ -1,3 +1,5 @@
+// create child process using fork() system call method.
+
 #include<stdio.h>
 #include<unistd.h>
 

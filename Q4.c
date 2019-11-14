@@ -1,3 +1,5 @@
+// Producer-Consumer problem using semaphore.
+
 #include<stdio.h>
 
 int s = 1;
